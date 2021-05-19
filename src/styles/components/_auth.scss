@@ -16,4 +16,44 @@
       width: 250px;
     }
   }
+  &__title {
+    color: darken($color: $primary, $amount: 20);
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    color: $dark-grey;
+    border: 0px;
+    border-bottom: 1px solid $light-grey;
+    font-size: 1em;
+    margin-bottom: 1em;
+    height: 2em;
+    width: 100%;
+
+    transition: border-bottom 0.3s ease;
+
+    &:focus {
+      border-bottom: 1px solid $primary;
+      outline: none;
+    }
+  }
+
+  &__social-networks {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  &__alert-error {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
 }
