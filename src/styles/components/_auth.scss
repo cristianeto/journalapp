@@ -1,0 +1,19 @@
+.auth {
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  &__box {
+    &-container {
+      background-color: white;
+      box-shadow: 0 3px $dark-grey;
+      padding: 20px;
+      width: 250px;
+    }
+  }
+}
