@@ -7,8 +7,8 @@
   color: white;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 40em;
+  height: 100vh;
+  width: 30em;
   padding-left: 1em;
   padding-right: 1em;
 }
@@ -33,5 +33,45 @@
 
   &:hover {
     color: darken($color: white, $amount: 20);
+  }
+}
+
+.journal__entries {
+  flex: 1 1 auto;
+  margin-top: 2em;
+  overflow-y: scroll;
+}
+.journal__entry {
+  background-color: white;
+  border-radius: 4px;
+  color: $dark-grey;
+  display: flex;
+  margin-bottom: 1em;
+  overflow: hidden;
+  &-picture {
+    height: 8em;
+    width: 25em;
+  }
+  &-body {
+    padding: 1em;
+  }
+  &-title {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  &-content {
+    font-size: 0.9em;
+    text-align: justify;
+  }
+}
+
+.journal__entry-date-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+  span {
+    font-size: 1em;
   }
 }
