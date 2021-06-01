@@ -12,9 +12,9 @@ const JournalEntry = () => {
         }}
       ></div>
       <div className='journal__entry-body'>
-        <p className='journal__entry-title'>Lorem ipsum dolor sit amet.</p>
+        <p className='journal__entry-title'>Lorem ipsum dolor</p>
         <p className='journal__entry-content'>
-          Quibusdam quis cumque iure repellendus eveniet voluptatum numquam
+          Quibusdam quis cumque iure repellendus
         </p>
       </div>
       <div className='journal__entry-date-box'>
