@@ -26,7 +26,7 @@ const AppRouter = () => {
   }, [dispatch, setChecking, setIsLoggedIn]);
 
   if (checking) {
-    return <h1>Espere...</h1>;
+    return <h1>Please wait...</h1>;
   }
 
   return (

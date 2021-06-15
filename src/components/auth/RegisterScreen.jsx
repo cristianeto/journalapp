@@ -88,8 +88,7 @@ const RegisterScreen = () => {
           Register
         </button>
 
-        <Link to='/auth/register' className='link'>
-          {' '}
+        <Link to='/auth/login' className='link'>
           Already register?
         </Link>
       </form>
