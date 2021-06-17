@@ -17,7 +17,10 @@ const JournalEntry = ({ id, date, title, body, url }) => {
     dispatch(activeNote(id, note));
   };
   return (
-    <div className='journal__entry pointer' onClick={handleEntryActive}>
+    <div
+      className='journal__entry pointer animate__animated animate__fadeIn animate__faster'
+      onClick={handleEntryActive}
+    >
       {url && (
         <div
           className='journal__entry-picture'
