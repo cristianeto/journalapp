@@ -2,15 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import NotesAppbar from './NotesAppbar';
 import { useForm } from '../../hooks/useForm';
-import { activeNote } from '../../actions/notes';
+import { activeNote, startDeleteting } from '../../actions/notes';
 
 const NoteScreen = () => {
   const { active: note } = useSelector((state) => state.notes);
   const [formValues, handleInputChange, reset] = useForm(note);
-  const { body, title } = formValues;
+  const { body, title, id } = formValues;
   const dispatch = useDispatch();
 
   const activeId = useRef(note.id);
+
+  const handleDelete = () => {
+    console.log(id);
+    dispatch(startDeleteting(id));
+  };
 
   useEffect(() => {
     if (note.id !== activeId.current) {
@@ -43,15 +48,15 @@ const NoteScreen = () => {
           value={body}
           onChange={handleInputChange}
         ></textarea>
-        {activeNote.url && (
+        {note.url && (
           <div className='notes__image'>
-            <img
-              src='https://images.immediate.co.uk/production/volatile/sites/22/2019/06/Englsih-oak-in-a-field-d2ece6a.png?quality=45&resize=620,413'
-              alt='tree'
-            />
+            <img src={note.url} alt='tree' />
           </div>
         )}
       </div>
+      <button className='btn btn-danger' onClick={handleDelete}>
+        Delete
+      </button>
     </div>
   );
 };
